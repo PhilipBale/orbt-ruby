@@ -11,5 +11,7 @@ Gem::Specification.new do |s|
     'https://github.com/PhilipBale/orbt-ruby'
   s.license       = 'MIT'
 
+  s.require_paths = ["lib"]
+
   s.add_dependency "rest-client", "~> 1.8"
 end
