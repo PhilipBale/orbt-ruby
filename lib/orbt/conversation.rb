@@ -1,9 +1,12 @@
 module Orbt
   class Conversation
     class << self
-      def create(params)
-        puts "Creating w/ params: #{params}"
-        Orbt::Client.post()
+      def create(payload)
+        Orbt::Client.post("conversations", payload)
+      end
+
+      def all
+        Orbt::Client.get("conversations/all")
       end
     end
   end

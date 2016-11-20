@@ -1,5 +1,4 @@
-require 'orbt/client'
-require 'orbt/resource'
+require 'orbt/client' 
 require 'orbt/conversation'
 
 module Orbt

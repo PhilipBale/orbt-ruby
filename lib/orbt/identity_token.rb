@@ -13,7 +13,6 @@ module Orbt
       def orbt_secret
           @orbt_secret || '00DjRhhRvPWxZO0agevfBHzgV4APdU9FHTfL4o9Y'
       end
-
     end
 
     attr_reader :user_id

@@ -13,12 +13,12 @@ module Orbt
       end 
 
     private
-      def request(method, payload = {}, headers = {})
-        url = "http://backend.orbt.io/#{url}"
+      def request(method, endpoint, payload = {}, headers = {})
+        url = "http://backend.orbt.io/#{endpoint}"
 
         debug = true
         if debug
-          url = "http://localhost:3020/#{url}"
+          url = "http://localhost:3020/#{endpoint}"
         end
 
         headers = {
@@ -34,7 +34,8 @@ module Orbt
         response = RestClient::Request.execute(method: method, url: url, payload: payload, headers: headers)
         response.empty? ? nil : JSON.parse(response)
       rescue => e
-        puts 'Exception: ' + e.message
+        puts 'Exception: ' + e.to_s
+        puts 'Trace: ' + e.backtrace
       end  
     end 
   end
