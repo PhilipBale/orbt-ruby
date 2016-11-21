@@ -1,8 +1,8 @@
 module Orbt
   class Conversation
     class << self
-      def create(payload)
-        Orbt::Client.post("conversations", payload)
+      def create(payload, senderUUID)
+        Orbt::Client.post("conversations", payload, {'UUID' => senderUUID})
       end
 
       def all
@@ -11,3 +11,4 @@ module Orbt
     end
   end
 end
+
