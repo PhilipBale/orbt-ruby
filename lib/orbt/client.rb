@@ -35,7 +35,7 @@ module Orbt
         response.empty? ? nil : JSON.parse(response)
       rescue => e
         puts 'Exception: ' + e.to_s
-        puts 'Trace: ' + e.backtrace
+        puts 'Trace: ' + e.backtrace.to_s
       end  
     end 
   end
