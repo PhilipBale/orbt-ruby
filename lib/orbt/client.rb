@@ -16,7 +16,7 @@ module Orbt
       def request(method, endpoint, payload = {}, headers = {})
         url = "http://backend.orbt.io/#{endpoint}"
 
-        debug = true
+        debug = false
         if debug
           url = "http://localhost:3020/#{endpoint}"
         end
